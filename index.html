@@ -17,6 +17,10 @@
   .lang a { color:var(--accent); text-decoration:none; border:1px solid var(--line); padding:4px 12px; border-radius:999px; }
   hr { border:0; border-top:1px solid var(--line); margin:48px 0; }
   a { color:var(--accent); }
+  table { border-collapse:collapse; width:100%; font-size:.93rem; margin:8px 0 4px; }
+  th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:rgba(138,79,216,0.08); }
+  .tbl { overflow-x:auto; }
 </style>
 </head>
 <body>
@@ -25,106 +29,166 @@
 
 <section id="en" lang="en">
 <h1>Privacy Policy – German with Esteban</h1>
-<p class="meta">Last updated: November 7, 2026</p>
+<p class="meta">Last updated: November 9, 2026</p>
 
-<p>This Privacy Policy explains how the app <strong>German with Esteban</strong> (package <code>com.jestebanru.germanwithesteban</code>), developed and published by JEstebanRU (Jeisson Esteban Rodriguez Urrea), handles information. In short: <strong>your learning progress stays on your device. The developer runs no server and does not receive, sell or share your personal data.</strong> The app is free and shows ads through Google AdMob, and it offers optional one-time purchases through Google Play. Those two Google services process some data as described in section 3.</p>
+<p>This Privacy Policy explains how the app <strong>German with Esteban</strong> (package <code>com.jestebanru.germanwithesteban</code>) handles personal data. The app is developed and published by JEstebanRU (Jeisson Esteban Rodriguez Urrea), who is the controller of the data described here. Contact: <a href="mailto:esteban07e@gmail.com">esteban07e@gmail.com</a>.</p>
+<p>In short: your learning progress is saved on your device. To offer online leaderboards and cloud saving, the app creates a player account with Google Firebase. If you sign in with Google, your progress is also copied to the cloud. The app shows ads through Google AdMob, measures anonymous usage with Google Analytics for Firebase, and sells optional one-time purchases through Google Play. The developer does not sell your data.</p>
 
-<h2>1. Data stored only on your device</h2>
-<p>To work, the app saves your game progress on your own device: chosen pet and skins, learned words and answers, statistics, minigame scores, usage time per section, login streak, which purchases you own, how often ads were shown (to space them out) and settings (language, sound, reminders). This data:</p>
+<h2>1. Data stored on your device</h2>
+<p>The app saves your game on your device: chosen pet and skins, learned words and answers, statistics, minigame scores, usage time per section, login streak, purchases you own, how often ads were shown and settings (language, sound, reminders). It is deleted when you uninstall the app or clear its data. You can also delete the minigame scores saved on the device from any leaderboard (<em>This phone → Delete the scores on this phone</em>).</p>
+
+<h2>2. Your player account</h2>
+<p>When the app opens, it automatically creates an anonymous player account in <strong>Firebase Authentication</strong> (Google). It is identified by a random <strong>player ID</strong>; no name, email or password is required. The app then offers to sign in with your <strong>Google account</strong>. If you accept, Firebase links your Google account (its email address and Google account identifier) to the player account. You can use the app without signing in with Google; the leaderboards keep working, but your progress is not saved in the cloud. You can sign out at any time in the 🌐 window at Home.</p>
+
+<h2>3. Online leaderboards (visible to other players)</h2>
+<p>When you choose to send a record at the end of a minigame, the following is stored on Firebase and <strong>shown to other players</strong> in the worldwide, national and monthly leaderboards:</p>
 <ul>
-  <li>never leaves your device and is not sent to the developer;</li>
-  <li>is deleted when you uninstall the app or clear its data;</li>
-  <li>can be exported by you, if you choose, as a backup file (💾 button). That file stays wherever you save it.</li>
+  <li>your <strong>leaderboard name</strong> (written by you, up to 10 characters; by default your pet's name). Offensive names are blocked, and you can change it once every 30 days;</li>
+  <li>the score, time, level and minigame, the pet you used, and the date;</li>
+  <li>your <strong>country</strong>, shown as a flag. It is worked out on your device from its time-zone setting (or its language region). The app does not use GPS or precise location;</li>
+  <li>your player ID (not shown in the app, but stored with each score).</li>
 </ul>
-<p>The app has no user accounts, no registration and no login.</p>
+<p>Only your best score for each table is kept. Please don't use your real full name or any personal information as your leaderboard name.</p>
 
-<h2>2. Information the developer does not collect</h2>
-<p>The developer does not collect your name, email address, contacts, precise location, photos, microphone or camera data. The app contains no analytics or tracking service of its own.</p>
+<h2>4. Reports and moderation</h2>
+<p>You can report another player's name or hide that player on your device. A report stores the reported name and player ID, the table, your player ID and the date, so that the developer can review it. The developer may rename or delete inappropriate names and scores, and may block a player ID from the leaderboards.</p>
 
-<h2>3. Third-party services</h2>
+<h2>5. Cloud saving (only if you sign in with Google)</h2>
+<p>If you signed in with Google, a compressed copy of your game progress (the same data as in section 1) and a short summary (pet, number of completed worlds, date) are stored on Firebase every few minutes and when you leave the app. This lets you continue on another phone or after reinstalling. The cloud copy is linked only to your account and is not visible to other players.</p>
+
+<h2>6. Analytics</h2>
+<p>The app uses <strong>Google Analytics for Firebase</strong> to understand how it is used and to improve it: screens visited, lessons and bosses started and finished, minigames played, onboarding steps, the app language, the active pet and similar events. This data is linked to a random app-instance identifier, <strong>not to your player name, email or advertising ID</strong> (advertising-ID collection is disabled for analytics). Nothing you type is sent. Where consent is required (EEA, UK, Switzerland), analytics respects the choice you make in Google's consent message. Google keeps this data for a limited period (up to 14 months).</p>
+
+<h2>7. App integrity (Firebase App Check)</h2>
+<p>To protect the leaderboards from fake scores, the app uses Firebase App Check with Google Play Integrity. It checks that requests come from the genuine app installed from Google Play, using information about the app and device provided by Google Play services.</p>
+
+<h2>8. Advertising (Google AdMob)</h2>
+<p>The app shows ads served by Google AdMob: an occasional sponsored card between lessons, full-screen ads at natural breaks (for example, after a minigame) and optional rewarded ads you choose to watch. To serve, measure and personalize ads and to prevent fraud, Google may collect and process data from your device, such as the advertising ID, IP address, approximate location derived from it, device and app information, and your interactions with ads. In the EEA, the UK, Switzerland and other regions where it is required, the app asks for your consent through Google's consent message. You can change your choice in <em>Settings → Ad privacy options</em>, and reset or delete your advertising ID in your device settings. With Premium, the app shows no sponsored cards and no full-screen ads. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
+
+<h2>9. Purchases (Google Play Billing)</h2>
+<p>The optional one-time purchases (Premium and Explorer Pass) are processed entirely by Google Play. The developer never sees your payment details. Google tells the app only which products your Google account owns, so they can be restored after reinstalling.</p>
+
+<h2>10. Other services</h2>
 <ul>
-  <li><strong>Google AdMob (advertising):</strong> the app shows ads served by Google AdMob: an occasional sponsored card between lessons, full-screen ads at natural breaks (for example, after a minigame) and optional rewarded ads that you choose to watch (for example, for a last chance against a boss). To serve, measure and personalize ads and to prevent fraud, Google may collect and process data from your device, such as the advertising ID, IP address, approximate location derived from it, device and app information, and your interactions with ads. In the European Economic Area, the United Kingdom, Switzerland and other regions that require it, the app asks for your consent through Google's consent message before personalized ads are shown. You can change your choice at any time in the app's <em>Settings → Ad privacy options</em>. You can also reset or delete your advertising ID in your device's settings. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
-  <li><strong>Google Play Billing (purchases):</strong> the optional one-time purchases (Premium and Explorer Pass) are processed entirely by Google Play. The developer never sees your payment details. Google shares with the app only which products your Google account owns, so they can be restored after reinstalling. With Premium, the app shows no sponsored cards and no full-screen ads.</li>
-  <li><strong>Text-to-speech (🔈):</strong> German pronunciation uses the speech engine already installed on your device (for example, Google's speech services). The words to be pronounced are passed to that engine, which is governed by its provider's own privacy policy.</li>
-  <li><strong>Google Play:</strong> downloading and updating the app happens through Google Play, which is governed by Google's terms and privacy policy.</li>
+  <li><strong>Text-to-speech (🔈):</strong> pronunciation uses the speech engine installed on your device (for example, Google's speech services), which is governed by its provider's privacy policy.</li>
+  <li><strong>Notifications:</strong> the daily study reminder is scheduled locally on your device.</li>
 </ul>
 
-<h2>4. Permissions</h2>
+<h2>11. Where the data is stored, and service providers</h2>
+<p>Account, leaderboard, report and cloud-save data is stored in Google Cloud Firestore in the European Union (Frankfurt, Germany), operated by Google as the developer's service provider (processor). Google may process data in other countries under its data-protection terms. All data is encrypted in transit (HTTPS/TLS). Providers: Google Firebase (Authentication, Firestore, Analytics, App Check), Google AdMob, Google Play. See <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+
+<h2>12. Legal bases (EEA/UK)</h2>
 <ul>
-  <li><strong>Notifications:</strong> used only to show a local daily reminder to study. Reminders are scheduled on the device; no server is involved. You can turn them off in the app's Settings or in your device settings.</li>
-  <li><strong>Internet and network state:</strong> used to load ads and Google Play purchases. Everything else (words, images, sounds and fonts) is included in the app.</li>
-  <li><strong>Advertising ID:</strong> used by Google AdMob as described in section 3.</li>
+  <li>Player account, leaderboards, cloud saving, reports and moderation: performance of the service you use (Art. 6(1)(b) GDPR) and the developer's legitimate interest in fair, safe leaderboards (Art. 6(1)(f)).</li>
+  <li>Personalized ads and analytics: your consent where required (Art. 6(1)(a)), which you can withdraw at any time.</li>
+  <li>App integrity: legitimate interest in preventing abuse and cheating (Art. 6(1)(f)).</li>
 </ul>
 
-<h2>5. Children</h2>
-<p>The app is intended for a general audience aged 13 and older and is not directed at children under 13. The developer does not knowingly collect personal information from anyone.</p>
-
-<h2>6. Your choices and deleting data</h2>
+<h2>13. How long data is kept</h2>
 <ul>
-  <li>Ad consent: <em>Settings → Ad privacy options</em> in the app (where it applies to you).</li>
-  <li>Advertising ID: your device's settings (Google → Ads).</li>
-  <li>Progress stored on the device: uninstall the app or clear its data.</li>
-  <li>Data held by Google: see <a href="https://myaccount.google.com/data-and-privacy">your Google Account's data and privacy settings</a>.</li>
+  <li>Player account, leaderboard name and scores, cloud save: until you delete your account. Scores from old monthly tables may be deleted earlier.</li>
+  <li>Reports: up to 12 months, for moderation only.</li>
+  <li>Analytics: up to 14 months (Google Analytics retention).</li>
+  <li>Data on your device: until you uninstall the app or clear its data.</li>
 </ul>
 
-<h2>7. Changes to this policy</h2>
-<p>If future versions add features such as cloud saving, online leaderboards or analytics, this policy will be updated before those features are released, and the date above will change.</p>
+<h2>14. Deleting your account and data</h2>
+<ul>
+  <li><strong>In the app:</strong> 🌐 at Home → <em>Delete account and online data</em>. This deletes your leaderboard name and scores, your cloud save and your player account immediately. The progress saved on your phone is kept.</li>
+  <li><strong>Without the app:</strong> follow <a href="https://jestebanru7.github.io/delete-account/">jestebanru7.github.io/delete-account</a> or email <a href="mailto:esteban07e@gmail.com?subject=Delete%20account%20-%20German%20with%20Esteban">esteban07e@gmail.com</a> with your Google email or player ID. Requests are completed within 30 days.</li>
+</ul>
 
-<h2>8. Contact</h2>
-<p>For any question about this policy: <a href="mailto:esteban07e@gmail.com">esteban07e@gmail.com</a></p>
+<h2>15. Your rights</h2>
+<p>You can ask for access to, correction of, deletion of, restriction of or a copy of your personal data, and object to its processing, by writing to the email above. You also have the right to complain to a data-protection authority (in Germany, for example, the authority of your federal state).</p>
+
+<h2>16. Children</h2>
+<p>The app is intended for a general audience aged 13 and older and is not directed at children under 13. If you believe a child under 13 has used the leaderboards or cloud saving, contact the developer and the data will be deleted.</p>
+
+<h2>17. Changes to this policy</h2>
+<p>If the app changes the way it handles data, this policy will be updated and the date above will change.</p>
 </section>
 
 <hr>
 
 <section id="es" lang="es">
 <h1>Política de privacidad – German with Esteban</h1>
-<p class="meta">Última actualización: 7 de noviembre de 2026</p>
+<p class="meta">Última actualización: 9 de noviembre de 2026</p>
 
-<p>Esta política explica cómo trata la información la app <strong>German with Esteban</strong> (paquete <code>com.jestebanru.germanwithesteban</code>), desarrollada y publicada por JEstebanRU (Jeisson Esteban Rodriguez Urrea). En resumen: <strong>tu progreso de aprendizaje se queda en tu dispositivo. El desarrollador no tiene ningún servidor y no recibe, vende ni comparte tus datos personales.</strong> La app es gratuita y muestra anuncios a través de Google AdMob, y ofrece compras únicas opcionales a través de Google Play. Esos dos servicios de Google tratan algunos datos, como se explica en el punto 3.</p>
+<p>Esta política explica cómo trata los datos personales la app <strong>German with Esteban</strong> (paquete <code>com.jestebanru.germanwithesteban</code>). La app la desarrolla y publica JEstebanRU (Jeisson Esteban Rodriguez Urrea), responsable de los datos que se describen aquí. Contacto: <a href="mailto:esteban07e@gmail.com">esteban07e@gmail.com</a>.</p>
+<p>En resumen: tu progreso se guarda en tu dispositivo. Para ofrecer clasificaciones en línea y guardado en la nube, la app crea una cuenta de jugador con Google Firebase. Si inicias sesión con Google, tu progreso también se copia en la nube. La app muestra anuncios con Google AdMob, mide el uso de forma anónima con Google Analytics para Firebase y vende compras únicas opcionales a través de Google Play. El desarrollador no vende tus datos.</p>
 
-<h2>1. Datos guardados solo en tu dispositivo</h2>
-<p>Para funcionar, la app guarda tu progreso en tu propio dispositivo: mascota y skins elegidas, palabras aprendidas y respuestas, estadísticas, puntuaciones de los minijuegos, tiempo de uso por sección, racha de días, qué compras tienes, cada cuánto se mostraron anuncios (para espaciarlos) y ajustes (idioma, sonido, recordatorios). Estos datos:</p>
+<h2>1. Datos guardados en tu dispositivo</h2>
+<p>La app guarda tu partida en tu dispositivo: mascota y skins elegidas, palabras aprendidas y respuestas, estadísticas, puntuaciones de los minijuegos, tiempo de uso por sección, racha de días, qué compras tienes, cada cuánto se mostraron anuncios y ajustes (idioma, sonido, recordatorios). Se borra al desinstalar la app o borrar sus datos. También puedes borrar las puntuaciones guardadas en el móvil desde cualquier tabla de clasificación (<em>Este móvil → Borrar las marcas de este móvil</em>).</p>
+
+<h2>2. Tu cuenta de jugador</h2>
+<p>Al abrir la app se crea automáticamente una cuenta de jugador anónima en <strong>Firebase Authentication</strong> (Google). Se identifica con un <strong>ID de jugador</strong> aleatorio; no hace falta nombre, correo ni contraseña. Después, la app te ofrece iniciar sesión con tu <strong>cuenta de Google</strong>. Si aceptas, Firebase vincula tu cuenta de Google (su correo y su identificador de cuenta de Google) a la cuenta de jugador. Puedes usar la app sin iniciar sesión con Google; las clasificaciones siguen funcionando, pero tu progreso no se guarda en la nube. Puedes cerrar la sesión cuando quieras desde la ventana 🌐 de Casa.</p>
+
+<h2>3. Clasificaciones en línea (visibles para otros jugadores)</h2>
+<p>Cuando decides enviar un récord al terminar un minijuego, se guarda en Firebase lo siguiente, y <strong>otros jugadores lo ven</strong> en las clasificaciones mundial, nacional y mensual:</p>
 <ul>
-  <li>nunca salen de tu dispositivo y no se envían al desarrollador;</li>
-  <li>se borran al desinstalar la app o borrar sus datos;</li>
-  <li>puedes exportarlos tú, si quieres, como archivo de respaldo (botón 💾). Ese archivo queda donde tú lo guardes.</li>
+  <li>tu <strong>nombre en las clasificaciones</strong> (lo escribes tú, máximo 10 caracteres; por defecto, el de tu mascota). Los nombres ofensivos se bloquean, y puedes cambiarlo una vez cada 30 días;</li>
+  <li>la puntuación, el tiempo, el nivel y el minijuego, la mascota que usaste y la fecha;</li>
+  <li>tu <strong>país</strong>, que se muestra como una bandera. Se calcula en tu dispositivo a partir de su zona horaria (o de la región de su idioma). La app no usa GPS ni la ubicación precisa;</li>
+  <li>tu ID de jugador (no se muestra en la app, pero se guarda con cada puntuación).</li>
 </ul>
-<p>La app no tiene cuentas de usuario, ni registro, ni inicio de sesión.</p>
+<p>Solo se guarda tu mejor puntuación de cada tabla. Te pedimos que no uses tu nombre completo real ni datos personales como nombre en las clasificaciones.</p>
 
-<h2>2. Información que el desarrollador no recopila</h2>
-<p>El desarrollador no recopila tu nombre, correo electrónico, contactos, ubicación precisa, fotos ni datos del micrófono o la cámara. La app no contiene ningún servicio propio de analítica ni de seguimiento.</p>
+<h2>4. Denuncias y moderación</h2>
+<p>Puedes denunciar el nombre de otro jugador u ocultarlo en tu dispositivo. Una denuncia guarda el nombre y el ID del jugador denunciado, la tabla, tu ID de jugador y la fecha, para que el desarrollador la revise. El desarrollador puede cambiar o borrar nombres y puntuaciones inapropiados, y bloquear un ID de jugador en las clasificaciones.</p>
 
-<h2>3. Servicios de terceros</h2>
+<h2>5. Guardado en la nube (solo si inicias sesión con Google)</h2>
+<p>Si iniciaste sesión con Google, una copia comprimida de tu progreso (los mismos datos del punto 1) y un resumen breve (mascota, número de mundos completados, fecha) se guardan en Firebase cada pocos minutos y al salir de la app. Así puedes seguir en otro móvil o tras reinstalar. La copia solo está vinculada a tu cuenta y no la ven otros jugadores.</p>
+
+<h2>6. Analítica</h2>
+<p>La app usa <strong>Google Analytics para Firebase</strong> para entender cómo se usa y mejorarla: pantallas visitadas, lecciones y jefes empezados y terminados, minijuegos jugados, pasos de la bienvenida, el idioma de la app, la mascota activa y eventos parecidos. Estos datos se vinculan a un identificador aleatorio de la instalación, <strong>no a tu nombre en las clasificaciones, a tu correo ni a tu ID de publicidad</strong> (la recogida del ID de publicidad está desactivada para la analítica). No se envía nada de lo que escribes. Donde hace falta consentimiento (EEE, Reino Unido, Suiza), la analítica respeta lo que elijas en el mensaje de consentimiento de Google. Google conserva estos datos un tiempo limitado (hasta 14 meses).</p>
+
+<h2>7. Integridad de la app (Firebase App Check)</h2>
+<p>Para proteger las clasificaciones de puntuaciones falsas, la app usa Firebase App Check con Google Play Integrity. Comprueba que las peticiones vienen de la app auténtica instalada desde Google Play, con información sobre la app y el dispositivo que facilitan los servicios de Google Play.</p>
+
+<h2>8. Publicidad (Google AdMob)</h2>
+<p>La app muestra anuncios servidos por Google AdMob: de vez en cuando una tarjeta patrocinada entre lecciones, anuncios a pantalla completa en pausas naturales (por ejemplo, al terminar un minijuego) y anuncios bonificados opcionales que tú decides ver. Para mostrar, medir y personalizar los anuncios y prevenir el fraude, Google puede recopilar y tratar datos de tu dispositivo, como el ID de publicidad, la dirección IP, la ubicación aproximada deducida de ella, información del dispositivo y de la app, y tus interacciones con los anuncios. En el EEE, el Reino Unido, Suiza y otras regiones donde se exige, la app te pide el consentimiento con el mensaje de Google. Puedes cambiar tu elección en <em>Ajustes → Privacidad de anuncios</em>, y restablecer o borrar tu ID de publicidad en los ajustes del dispositivo. Con Premium, la app no muestra tarjetas patrocinadas ni anuncios a pantalla completa. Consulta <a href="https://policies.google.com/technologies/partner-sites?hl=es">cómo usa Google la información de las apps que usan sus servicios</a>.</p>
+
+<h2>9. Compras (Google Play Billing)</h2>
+<p>Las compras únicas opcionales (Premium y Pase Explorador) las procesa por completo Google Play. El desarrollador nunca ve tus datos de pago. Google solo le comunica a la app qué productos tiene tu cuenta de Google, para poder restaurarlos al reinstalar.</p>
+
+<h2>10. Otros servicios</h2>
 <ul>
-  <li><strong>Google AdMob (publicidad):</strong> la app muestra anuncios servidos por Google AdMob: de vez en cuando una tarjeta patrocinada entre lecciones, anuncios a pantalla completa en pausas naturales (por ejemplo, al terminar un minijuego) y anuncios bonificados opcionales que tú decides ver (por ejemplo, para una última oportunidad contra un Jefe). Para mostrar, medir y personalizar los anuncios y prevenir el fraude, Google puede recopilar y tratar datos de tu dispositivo, como el ID de publicidad, la dirección IP, la ubicación aproximada deducida de ella, información del dispositivo y de la app, y tus interacciones con los anuncios. En el Espacio Económico Europeo, el Reino Unido, Suiza y otras regiones que lo exigen, la app te pide el consentimiento con el mensaje de Google antes de mostrar anuncios personalizados. Puedes cambiar tu elección cuando quieras en <em>Ajustes → Privacidad de anuncios</em> dentro de la app. También puedes restablecer o borrar tu ID de publicidad en los ajustes del dispositivo. Consulta <a href="https://policies.google.com/technologies/partner-sites?hl=es">cómo usa Google la información de las apps que usan sus servicios</a> y la <a href="https://policies.google.com/privacy?hl=es">Política de privacidad de Google</a>.</li>
-  <li><strong>Google Play Billing (compras):</strong> las compras únicas opcionales (Premium y Pase Explorador) las procesa por completo Google Play. El desarrollador nunca ve tus datos de pago. Google solo le comunica a la app qué productos tiene tu cuenta de Google, para poder restaurarlos al reinstalar. Con Premium, la app no muestra tarjetas patrocinadas ni anuncios a pantalla completa.</li>
-  <li><strong>Pronunciación (🔈):</strong> la pronunciación en alemán usa el motor de voz ya instalado en tu dispositivo (por ejemplo, los servicios de voz de Google). Las palabras que se pronuncian se pasan a ese motor, que se rige por la política de privacidad de su proveedor.</li>
-  <li><strong>Google Play:</strong> la descarga y las actualizaciones de la app se hacen a través de Google Play, que se rige por las condiciones y la política de privacidad de Google.</li>
+  <li><strong>Pronunciación (🔈):</strong> usa el motor de voz instalado en tu dispositivo (por ejemplo, los servicios de voz de Google), que se rige por la política de privacidad de su proveedor.</li>
+  <li><strong>Notificaciones:</strong> el recordatorio diario se programa en tu propio dispositivo.</li>
 </ul>
 
-<h2>4. Permisos</h2>
+<h2>11. Dónde se guardan los datos y proveedores</h2>
+<p>Los datos de la cuenta, las clasificaciones, las denuncias y el guardado en la nube se guardan en Google Cloud Firestore en la Unión Europea (Fráncfort, Alemania), operado por Google como proveedor de servicios (encargado del tratamiento) del desarrollador. Google puede tratar datos en otros países según sus condiciones de protección de datos. Todos los datos se cifran en tránsito (HTTPS/TLS). Proveedores: Google Firebase (Authentication, Firestore, Analytics, App Check), Google AdMob, Google Play. Consulta la <a href="https://firebase.google.com/support/privacy">privacidad de Firebase</a> y la <a href="https://policies.google.com/privacy?hl=es">Política de privacidad de Google</a>.</p>
+
+<h2>12. Bases legales (EEE/Reino Unido)</h2>
 <ul>
-  <li><strong>Notificaciones:</strong> solo para mostrar un recordatorio diario local para estudiar. Se programa en el propio dispositivo, sin ningún servidor. Puedes desactivarlo en los Ajustes de la app o del dispositivo.</li>
-  <li><strong>Internet y estado de la red:</strong> para cargar los anuncios y las compras de Google Play. Todo lo demás (palabras, imágenes, sonidos y tipografías) va incluido en la app.</li>
-  <li><strong>ID de publicidad:</strong> lo usa Google AdMob como se explica en el punto 3.</li>
+  <li>Cuenta de jugador, clasificaciones, guardado en la nube, denuncias y moderación: prestación del servicio que usas (art. 6.1.b RGPD) e interés legítimo del desarrollador en unas clasificaciones justas y seguras (art. 6.1.f).</li>
+  <li>Anuncios personalizados y analítica: tu consentimiento donde se exige (art. 6.1.a), que puedes retirar cuando quieras.</li>
+  <li>Integridad de la app: interés legítimo en prevenir abusos y trampas (art. 6.1.f).</li>
 </ul>
 
-<h2>5. Menores</h2>
-<p>La app está pensada para un público general de 13 años en adelante y no está dirigida a menores de 13 años. El desarrollador no recopila a sabiendas información personal de nadie.</p>
-
-<h2>6. Tus opciones y cómo borrar datos</h2>
+<h2>13. Cuánto tiempo se guardan los datos</h2>
 <ul>
-  <li>Consentimiento de anuncios: <em>Ajustes → Privacidad de anuncios</em> en la app (donde corresponda).</li>
-  <li>ID de publicidad: ajustes del dispositivo (Google → Anuncios).</li>
-  <li>Progreso guardado en el dispositivo: desinstala la app o borra sus datos.</li>
-  <li>Datos que tiene Google: consulta los <a href="https://myaccount.google.com/data-and-privacy">ajustes de datos y privacidad de tu cuenta de Google</a>.</li>
+  <li>Cuenta de jugador, nombre y puntuaciones en las clasificaciones, copia en la nube: hasta que borres tu cuenta. Las puntuaciones de tablas mensuales antiguas pueden borrarse antes.</li>
+  <li>Denuncias: hasta 12 meses, solo para la moderación.</li>
+  <li>Analítica: hasta 14 meses (conservación de Google Analytics).</li>
+  <li>Datos de tu dispositivo: hasta que desinstales la app o borres sus datos.</li>
 </ul>
 
-<h2>7. Cambios en esta política</h2>
-<p>Si versiones futuras añaden funciones como guardado en la nube, clasificaciones en línea o analítica, esta política se actualizará antes de publicarlas y cambiará la fecha de arriba.</p>
+<h2>14. Borrar tu cuenta y tus datos</h2>
+<ul>
+  <li><strong>En la app:</strong> 🌐 de Casa → <em>Borrar cuenta y datos online</em>. Borra al instante tu nombre y puntuaciones en las clasificaciones, tu copia en la nube y tu cuenta de jugador. El progreso guardado en tu móvil se mantiene.</li>
+  <li><strong>Sin la app:</strong> sigue <a href="https://jestebanru7.github.io/delete-account/">jestebanru7.github.io/delete-account</a> o escribe a <a href="mailto:esteban07e@gmail.com?subject=Borrar%20cuenta%20-%20German%20with%20Esteban">esteban07e@gmail.com</a> con tu correo de Google o tu ID de jugador. Las solicitudes se completan en un máximo de 30 días.</li>
+</ul>
 
-<h2>8. Contacto</h2>
-<p>Para cualquier pregunta sobre esta política: <a href="mailto:esteban07e@gmail.com">esteban07e@gmail.com</a></p>
+<h2>15. Tus derechos</h2>
+<p>Puedes pedir acceso, rectificación, supresión, limitación o una copia de tus datos personales, y oponerte a su tratamiento, escribiendo al correo de arriba. También tienes derecho a reclamar ante una autoridad de protección de datos (en Alemania, por ejemplo, la de tu estado federado).</p>
+
+<h2>16. Menores</h2>
+<p>La app está pensada para un público general de 13 años en adelante y no está dirigida a menores de 13 años. Si crees que un menor de 13 años ha usado las clasificaciones o el guardado en la nube, contacta con el desarrollador y los datos se borrarán.</p>
+
+<h2>17. Cambios en esta política</h2>
+<p>Si la app cambia la forma en que trata los datos, esta política se actualizará y cambiará la fecha de arriba.</p>
 </section>
 </main>
 </body>
